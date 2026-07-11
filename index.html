@@ -1,0 +1,704 @@
+<!<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+<title>Calvin | Développeur Web & Programmeur</title>
+
+<link rel="icon" href="logo.png">
+
+<meta name="description" content="Site personnel de Calvin, développeur web passionné par la programmation, la création de sites et les nouvelles technologies.">
+
+<link rel="stylesheet" href="style.css?v=2">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#contact {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.retour {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.retour:hover {
+    background-color: #0056b3;
+}
+
+.whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.whatsapp:hover {
+    background-color: #1ebe57;
+}
+
+.service {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#competences {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+#competences ul {
+    list-style: none;
+    padding: 0;
+}
+
+#competences li {
+    background: #007bff;
+    color: white;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+#competences li::after {
+    content: "";
+    display: block;
+    height: 6px;
+    margin-top: 8px;
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.mode-sombre {
+    background-color: #121212;
+    color: white;
+}
+
+.mode-sombre section,
+.mode-sombre footer {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark {
+    background-color: black;
+    color: white;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark p {
+    color: white;
+}
+##titre {
+    animation: arriveeTitre 2s ease;
+}
+
+@keyframes arriveeTitre {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+img:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+nav a {
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.retour {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    padding: 12px 18px;
+    background-color: blue;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.retour:hover {
+    transform: scale(1.1);
+}
+
+.projet {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.projet:hover {
+    transform: translateY(-10px);
+}
+
+.projet h3 {
+    color: blue;
+}
+
+#listeCompetences li {
+    animation: apparitionCompetence 0.8s ease;
+}
+
+@keyframes apparitionCompetence {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: apparitionSection 1s ease forwards;
+}
+
+@keyframes apparitionSection {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="menu">
+        <a href="#accueil">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+<section id="accueil">
+
+    <div class="banniere">
+        <h2>Bienvenue dans mon univers numérique</h2>
+    </div>
+
+    <h1 id="titre">Bienvenue sur le site de Calvin</h1>
+
+    <div class="photo">
+        <img src="calvin.png" alt="Photo de Calvin">
+    </div>
+
+    <p>Je m'appelle Calvin.</p>
+
+    <p class="accroche">
+        Je crée des solutions numériques modernes grâce au développement web et à la technologie.
+    </p>
+
+    <h3 id="texteAnime">
+        Développeur Web | Programmeur | Passionné de technologie
+    </h3>
+
+    <p>
+        Je suis développeur web passionné par la création de sites modernes,
+        la programmation et les nouvelles technologies.
+    </p>
+
+    <a href="#projets" class="bouton">
+        Découvrir mes projets
+    </a>
+
+    <a href="CV-Calvin.pdf" class="bouton" download>
+        Télécharger mon CV
+    </a>
+
+    <a href="#contact" class="bouton">
+        Me contacter
+    </a>
+
+</section>
+
+
+
+<section id="apropos">
+
+    <h2>À propos de moi</h2>
+
+    <p>
+        Je m'appelle Calvin. Je suis passionné par l'informatique,
+        la programmation et la création de sites web.
+    </p>
+
+</section>
+
+
+
+<section id="competences">
+
+    <h2>Mes compétences</h2>
+
+
+    <div class="carte">
+
+        <h3>HTML</h3>
+
+        <div class="barre">
+            <div class="niveau html"></div>
+        </div>
+
+        <p>90%</p>
+
+    </div>
+
+
+    <div class="carte">
+
+        <h3>CSS</h3>
+
+        <div class="barre">
+            <div class="niveau css"></div>
+        </div>
+
+        <p>80%</p>
+
+    </div>
+
+
+    <div class="carte">
+
+        <h3>JavaScript</h3>
+
+        <div class="barre">
+            <div class="niveau javascript"></div>
+        </div>
+
+        <p>60%</p>
+
+    </div>
+
+
+    <div class="carte">
+
+        <h3>Cybersécurité</h3>
+
+        <div class="barre">
+            <div class="niveau cyber"></div>
+        </div>
+
+        <p>50%</p>
+
+    </div>
+
+</section>
+
+<div class="carte">
+    <h3>CSS</h3>
+    <p>Design, couleurs et mise en page moderne.</p>
+</div>
+
+
+<div class="carte">
+    <h3>JavaScript</h3>
+    <p>Ajout d'interactions et de fonctionnalités.</p>
+</div>
+
+
+<div class="carte">
+    <h3>Cybersécurité</h3>
+    <p>Découverte de la sécurité informatique.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="projets">
+    <h2>Mes projets</h2>
+
+    <div class="projet">
+        <h3>Projet 1 : Portfolio personnel</h3>
+        <video controls width="100%">
+            <source src="wika.mp4" type="video/mp4">
+        </video>
+        <p>Création d'un portfolio en HTML, CSS et JavaScript.</p>
+    </div>
+
+    <div class="projet">
+        <h3>Projet 2 : Site d'entreprise</h3>
+        <video controls width="100%">
+            <source src="cava.mp4" type="video/mp4">
+        </video>
+        <p>Conception d'un site web moderne et responsive.</p>
+    </div>
+
+    <div class="projet">
+        <h3>Projet 3 : Galerie photos</h3>
+        <video controls width="100%">
+            <source src="kaka.mp4" type="video/mp4">
+        </video>
+        <p>Développement d'une galerie avec HTML, CSS et JavaScript.</p>
+    </div>
+</section>
+
+
+
+
+<section id="parcours">
+
+    <h2>Mon parcours</h2>
+
+    <div class="cartes">
+
+        <div class="carte">
+            <h3>Développement Web</h3>
+            <p>
+                Apprentissage de HTML, CSS et JavaScript
+                pour créer des sites modernes.
+            </p>
+        </div>
+
+
+        <div class="carte">
+            <h3>Cybersécurité</h3>
+            <p>
+                Découverte des bases de la sécurité informatique
+                et de la protection des systèmes.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<section id="services">
+
+    <h2>Mes services</h2>
+
+    <div class="cartes">
+
+        <div class="carte">
+            <h3>Création de sites web</h3>
+            <p>
+                Je crée des sites modernes avec HTML,
+                CSS et JavaScript.
+            </p>
+        </div>
+
+
+        <div class="carte">
+            <h3>Programmation</h3>
+            <p>
+                Apprentissage et développement
+                de solutions informatiques.
+            </p>
+        </div>
+
+
+        <div class="carte">
+            <h3>Technologies</h3>
+            <p>
+                Découverte des nouvelles technologies
+                du numérique.
+            </p>
+        </div>
+
+    </div>
+
+    <p>
+        Création de sites web, apprentissage de la programmation
+        et découverte des nouvelles technologies.
+    </p>
+
+</section>
+
+<div class="projet">
+    <h3>Apprentissage cybersécurité</h3>
+    <p>Découverte des bases de la sécurité informatique.</p>
+</div>
+</section>
+
+<section id="temoignages">
+    <h2>Témoignages</h2>
+
+    <div class="cartes">
+        <div class="carte">
+            <p>"Calvin est passionné et apprend très vite le développement web."</p>
+            <h4>- Premier avis</h4>
+        </div>
+
+        <div class="carte">
+            <p>"Son portfolio est propre et moderne. Il continue de progresser."</p>
+            <h4>- Deuxième avis</h4>
+        </div>
+    </div>
+</section>
+
+<section id="galerie">
+    <h2>Galerie de mes projets</h2>
+
+    <div class="cartes">
+        <div class="carte">
+            <h3>Mon premier site web</h3>
+            <img src="kuka.png" alt="Projet site web">
+            <p>Création d'un site avec HTML et CSS.</p>
+        </div>
+
+        <div class="carte">
+            <h3>Projet programmation</h3>
+            <img src="bon.png" alt="Projet programmation">
+            <p>Découverte de la programmation web.</p>
+        </div>
+    </div>
+</section>
+
+<section id="objectifs">
+    <h2>Mes objectifs</h2>
+
+    <p>
+        Mon objectif est de devenir un développeur web et un expert en cybersécurité,
+        de créer des applications modernes, de travailler sur des projets
+        internationaux et de contribuer à des solutions numériques utiles.
+    </p>
+</section>
+
+<section id="competences">
+    <h2>Mes compétences</h2>
+
+    <button onclick="afficherCompetences()">Voir mes compétences</button>
+
+    <ul id="listeCompetences">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript (en apprentissage)</li>
+        <li>Cybersécurité (en apprentissage)</li>
+        <li>Développement Web</li>
+    </ul>
+</section>
+
+<section id="technologies">
+    <h2>Technologies utilisées</h2>
+
+    <div class="cartes">
+        <div class="carte">
+            <h3>🌐 HTML</h3>
+            <p>Création de la structure des sites web.</p>
+        </div>
+
+        <div class="carte">
+            <h3>🎨 CSS</h3>
+            <p>Mise en forme et design des interfaces.</p>
+        </div>
+
+        <div class="carte">
+            <h3>⚡ JavaScript</h3>
+            <p>Ajout d'interactivité et de fonctionnalités.</p>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Mes services</h2>
+
+    <div class="carte">
+        <h3>💻📱 Création de sites web</h3>
+        <p>
+            Je crée des sites web modernes, adaptés aux ordinateurs,
+            tablettes et téléphones.
+        </p>
+
+        <a href="#contact" class="bouton">Demander ce service</a>
+    </div>
+</section>
+
+<div class="carte">
+    <h3>💻 Développement web</h3>
+    <p>
+        Création de pages web interactives avec HTML, CSS et JavaScript,
+        adaptées aux ordinateurs et aux téléphones.
+    </p>
+
+    <a href="#contact" class="bouton">Demander ce service</a>
+</div>
+
+<div class="carte">
+    <h3>🔒 Cybersécurité</h3>
+    <p>
+        Protection des sites web, découverte des vulnérabilités
+        et apprentissage des bonnes pratiques de sécurité informatique.
+    </p>
+
+    <a href="#contact" class="bouton">Demander ce service</a>
+</div>
+
+</section>
+
+<section id="galerie">
+    <h2>Ma galerie</h2>
+
+    <div class="images">
+        <img src="bien.jpg" alt="Projet 1">
+        <img src="bonjour.jpg" alt="Projet 2">
+        <img src="bonsoir.jpg" alt="Projet 3">
+        <img src="champion.jpg" alt="projet 4">
+    </div>
+</section>
+
+<section id="cv">
+    <h2>Mon CV</h2>
+
+    <p>
+        Découvrez mon parcours, mes compétences et mes expériences dans le domaine de l'informatique.
+    </p>
+
+    <a href="CV-Calvin.pdf" class="bouton" download>
+        📄 Télécharger mon CV
+    </a>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>
+        Vous pouvez me contacter pour parler de projets web ou de programmation.
+    </p>
+    
+    <form action="https://formspree.io/f/xpqvaaep" method="POST">
+  <label>
+    Votre adresse e-mail :
+    <input type="email" name="email" required>
+  </label>
+  <label>
+    Votre message :
+    <textarea name="message" required></textarea>
+  </label>
+  <button type="submit">Envoyer</button>
+    </form>
+    
+<p>
+    <a href="https://wa.me/243823496665" class="bouton" target="_blank">Contacter sur WhatsApp</a>
+</p>
+
+<p id="counter"></p>
+
+</section>
+
+<section id="reseaux">
+    <h2>Mes réseaux</h2>
+
+    <p>
+        <a href="https://wa.me/243823496665" target="_blank">WhatsApp</a>
+    </p>
+
+    <p>
+        <a href="mailto:calvinileke243@gmail.com">E-mail</a>
+    </p>
+
+    <p>
+        <a href="https://github.com/" target="_blank">GitHub</a>
+    </p>
+
+    <p>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+    </p>
+</section>
+
+<p id="date"></p>
+
+<p>Développeur web.</p>
+
+<button id="haut">⬆️ Retour en haut</button>
+
+<footer>
+    <p>© 2026 Calvin - Mon premier site web</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
